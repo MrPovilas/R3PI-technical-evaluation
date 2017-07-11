@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pZA-8v-tGt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Products View Controller-->
+        <scene sceneID="XM7-CW-deW">
+            <objects>
+                <viewController id="pZA-8v-tGt" customClass="ProductsViewController" customModule="Home_Coding_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3N0-6y-MHv"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIZ-4U-zHq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="28N-VV-CZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wXu-A8-jJb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="productCell" id="osI-G1-ROF" customClass="ProductCell" customModule="Home_Coding_Exercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="osI-G1-ROF" id="V5Y-t1-2Zp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOg-s3-JHu">
+                                                    <rect key="frame" x="0.0" y="11.5" width="42" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-dG-mwt">
+                                                    <rect key="frame" x="42" y="11" width="42" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="priceLabel"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUf-0L-Pk5">
+                                                    <rect key="frame" x="329" y="6" width="46" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="addToCartButton"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="addToCart:" destination="osI-G1-ROF" eventType="touchUpInside" id="Ggu-LJ-rwk"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXo-a2-Qqs" customClass="QuantityAdjustmentView" customModule="Home_Coding_Exercise" customModuleProvider="target">
+                                                    <rect key="frame" x="302" y="10" width="73" height="24"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-Lq-peM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="decreaseButton"/>
+                                                            <state key="normal" image="CartAdjustDecrease"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dh1-yx-kKY">
+                                                            <rect key="frame" x="24" y="2" width="25" height="20.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="countLabel"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="iD9-0P-7TD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUZ-LX-2an">
+                                                            <rect key="frame" x="49" y="0.0" width="24" height="24"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="increaseButton"/>
+                                                            <state key="normal" image="CartAdjustIncrease"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="adjustmentView">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstItem="gF4-Lq-peM" firstAttribute="leading" secondItem="eXo-a2-Qqs" secondAttribute="leading" id="0wF-qb-IL5"/>
+                                                        <constraint firstItem="dh1-yx-kKY" firstAttribute="leading" secondItem="gF4-Lq-peM" secondAttribute="trailing" id="1ki-yk-oUy" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                        <constraint firstItem="AUZ-LX-2an" firstAttribute="centerY" secondItem="gF4-Lq-peM" secondAttribute="centerY" id="8NZ-sZ-iVd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gF4-Lq-peM" secondAttribute="bottom" id="Kig-G6-4Iu"/>
+                                                        <constraint firstItem="gF4-Lq-peM" firstAttribute="top" secondItem="eXo-a2-Qqs" secondAttribute="top" id="OWS-QJ-yhb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AUZ-LX-2an" secondAttribute="trailing" id="RJn-MG-dad"/>
+                                                        <constraint firstItem="dh1-yx-kKY" firstAttribute="centerY" secondItem="gF4-Lq-peM" secondAttribute="centerY" id="d0q-1h-gZO"/>
+                                                        <constraint firstItem="AUZ-LX-2an" firstAttribute="leading" secondItem="dh1-yx-kKY" secondAttribute="trailing" id="ofb-Nq-HdR" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                        <constraint firstItem="AUZ-LX-2an" firstAttribute="height" secondItem="gF4-Lq-peM" secondAttribute="height" id="zib-dr-8o3"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="countLabel" destination="dh1-yx-kKY" id="UhX-EN-xRB"/>
+                                                        <outlet property="decreaseButton" destination="gF4-Lq-peM" id="hLH-61-cnZ"/>
+                                                        <outlet property="increaseButton" destination="AUZ-LX-2an" id="q62-IY-kBQ"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="XUf-0L-Pk5" secondAttribute="trailing" id="Fvt-qx-6Nk" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                <constraint firstItem="sOg-s3-JHu" firstAttribute="centerY" secondItem="V5Y-t1-2Zp" secondAttribute="centerY" id="Lll-Vg-itE"/>
+                                                <constraint firstItem="XUf-0L-Pk5" firstAttribute="centerY" secondItem="V5Y-t1-2Zp" secondAttribute="centerY" id="OB0-6T-6Nt"/>
+                                                <constraint firstItem="XUf-0L-Pk5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aA2-dG-mwt" secondAttribute="trailing" id="QAl-k2-fEw" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                <constraint firstItem="eXo-a2-Qqs" firstAttribute="centerY" secondItem="sOg-s3-JHu" secondAttribute="centerY" id="Qkb-KW-TpU"/>
+                                                <constraint firstItem="eXo-a2-Qqs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aA2-dG-mwt" secondAttribute="trailing" id="Vpc-qb-ow7" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                <constraint firstItem="eXo-a2-Qqs" firstAttribute="trailing" secondItem="XUf-0L-Pk5" secondAttribute="trailing" id="Vra-2B-FJF"/>
+                                                <constraint firstItem="sOg-s3-JHu" firstAttribute="leading" secondItem="V5Y-t1-2Zp" secondAttribute="leading" id="ZRk-3N-I18" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                <constraint firstItem="aA2-dG-mwt" firstAttribute="leading" secondItem="sOg-s3-JHu" secondAttribute="trailing" id="fa0-2v-M1b" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                                                <constraint firstItem="aA2-dG-mwt" firstAttribute="centerY" secondItem="sOg-s3-JHu" secondAttribute="centerY" id="iUA-OO-HH0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addToBasketButton" destination="XUf-0L-Pk5" id="nyW-gI-UzF"/>
+                                            <outlet property="nameLabel" destination="sOg-s3-JHu" id="BRY-gZ-Fqi"/>
+                                            <outlet property="priceLabel" destination="aA2-dG-mwt" id="Av3-70-Hw3"/>
+                                            <outlet property="quantityAdjustmentView" destination="eXo-a2-Qqs" id="daB-oi-WOr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZA-8v-tGt" id="hn6-Tx-2wA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wXu-A8-jJb" firstAttribute="top" secondItem="28N-VV-CZF" secondAttribute="topMargin" id="5Vg-pl-VIi"/>
+                            <constraint firstItem="wXu-A8-jJb" firstAttribute="leading" secondItem="28N-VV-CZF" secondAttribute="leading" id="BfK-0V-ZzB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wXu-A8-jJb" secondAttribute="bottom" id="G3h-nZ-hMc"/>
+                            <constraint firstAttribute="trailing" secondItem="wXu-A8-jJb" secondAttribute="trailing" id="koh-50-rH2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wXu-A8-jJb" id="INt-hd-ueU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aw5-Ia-uMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="-183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CartAdjustDecrease" width="24" height="24"/>
+        <image name="CartAdjustIncrease" width="24" height="24"/>
+    </resources>
+</document>

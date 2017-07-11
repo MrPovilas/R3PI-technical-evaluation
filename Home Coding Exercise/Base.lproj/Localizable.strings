@@ -1,0 +1,23 @@
+
+"peas" = "Peas";
+"eggs" = "Eggs";
+"milk" = "Milk";
+"beans" = "Beans";
+
+"bag" = "bag";
+"dozen" = "dozen";
+"bottle" = "bottle";
+"can" = "can";
+
+"addToCart" = "Add to cart";
+"totalPriceInUSD" = "Total cart price in USD is";
+"CheckPriceInDifferentCurrency" = "Check price in different currency";
+
+"products" = "Products";
+"cart" = "Cart";
+
+"error" = "Error";
+"ok" = "OK";
+"is" = "is";
+"priceIn" = "Price in";
+"convertingPriceTo" = "Converting price to";

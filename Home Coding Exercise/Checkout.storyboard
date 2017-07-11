@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zmw-jV-50Q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Checkout View Controller-->
+        <scene sceneID="5mZ-0A-heP">
+            <objects>
+                <viewController id="zmw-jV-50Q" customClass="CheckoutViewController" customModule="Home_Coding_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hP6-an-hxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4O-Y9-hRY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XEV-9h-fci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lI0-rT-Sh3">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-dR-Pls">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-X6-uwG">
+                                <rect key="frame" x="0.0" y="21" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeCurrency:" destination="zmw-jV-50Q" eventType="touchUpInside" id="Nf9-bX-kQG"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQc-oT-3fg">
+                                <rect key="frame" x="0.5" y="51" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-1A-6Ud">
+                                <rect key="frame" x="42.5" y="52" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1yg-dR-Pls" secondAttribute="trailing" id="6uP-we-Sru" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="jQc-oT-3fg" firstAttribute="top" secondItem="GEZ-X6-uwG" secondAttribute="bottom" id="7Xz-w2-PLV" customClass="DefaultVerticalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="GEZ-X6-uwG" firstAttribute="leading" secondItem="1yg-dR-Pls" secondAttribute="leading" id="C6V-hr-zvP"/>
+                            <constraint firstItem="jsY-1A-6Ud" firstAttribute="centerY" secondItem="jQc-oT-3fg" secondAttribute="centerY" id="ReW-DT-1YT"/>
+                            <constraint firstItem="GEZ-X6-uwG" firstAttribute="top" secondItem="1yg-dR-Pls" secondAttribute="bottom" id="Vk3-JT-zDM" customClass="DefaultVerticalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="1yg-dR-Pls" firstAttribute="top" secondItem="hP6-an-hxd" secondAttribute="bottom" id="drk-9Y-UE6" customClass="DefaultVerticalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="1yg-dR-Pls" firstAttribute="leading" secondItem="XEV-9h-fci" secondAttribute="leading" id="hBz-cs-trN" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="jsY-1A-6Ud" firstAttribute="leading" secondItem="jQc-oT-3fg" secondAttribute="trailing" id="jkM-0F-6IV" customClass="DefaultHorizontalSpacingConstraint" customModule="Home_Coding_Exercise" customModuleProvider="target"/>
+                            <constraint firstItem="jQc-oT-3fg" firstAttribute="leading" secondItem="GEZ-X6-uwG" secondAttribute="leading" id="m1j-Wk-APc"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="convertedPriceLabel" destination="jQc-oT-3fg" id="8KH-Hb-5Qn"/>
+                        <outlet property="currencyChangeButton" destination="GEZ-X6-uwG" id="p1z-eM-Fva"/>
+                        <outlet property="currencySelectorTextField" destination="lI0-rT-Sh3" id="yMc-jm-unW"/>
+                        <outlet property="priceConversionSpinner" destination="jsY-1A-6Ud" id="xWd-zP-8TD"/>
+                        <outlet property="priceInUSDLabel" destination="1yg-dR-Pls" id="SAP-sZ-4RB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqZ-Cm-gt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-212"/>
+        </scene>
+    </scenes>
+</document>
